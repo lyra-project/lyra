@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+  src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/ol.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<script src="js/ol-debug.js"></script>
+
+</head>
+<body>
+
+  <div class="searchbox">
+    <input type="text"> <input type="submit" value="Search">
+  </div>
+
+  <div id="map" class="map"></div>
+  <script>
+      var view = new ol.View({
+        center : [ 0, 0 ],
+        zoom : 2
+      });
+
+      var map = new ol.Map({
+        layers : [ new ol.layer.Tile({
+          source : new ol.source.OSM()
+        }) ],
+        target : 'map',
+        view : view
+      });
+    </script>
+</body>
+</html>
